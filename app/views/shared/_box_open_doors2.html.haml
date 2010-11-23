@@ -1,0 +1,8 @@
+.box
+  .h
+    %h3 Dny otevřených dveří
+  .in.news
+    %ul
+      - OpenDoor.box_days.each do |day|
+        %li= link_to "Nejbližsí den otevřených dveří:<span>#{formatted_date(day.date_from)}</span><span class=\"fl\">#{truncate(day.school.name, :length => 45, :omission => '&hellip;')}</span>", school_path(day.school)
+  .b        

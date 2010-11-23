@@ -18,6 +18,7 @@ ActionController::Routing::Routes.draw do |map|
     info.map 'interaktivni-mapa', :action => 'map'
     info.faq 'FAQ', :action => 'faq'
     info.accesibility 'prohlaseni-o-pristupnosti', :action => 'accesibility'
+    info.rodice 'pro-rodice-a-deti', :action => 'rodice'    
     info.contact 'kontakt', :action => 'contact'
     info.download 'ke-stazeni', :action => 'download'
     info.competition 'soutez', :action => 'competition'

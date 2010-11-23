@@ -1,0 +1,3 @@
+- OpenDoor.box_days2.each do |day|
+    %div.newsplace= link_to "<span class=\"fl\" style='color:black;'>Nejbližsí den otevřených dveří:&nbsp;</span><span class=\"fl\" style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span class=\"fl\" style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}</span>", school_path(day.school)
+    
