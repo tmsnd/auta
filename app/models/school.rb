@@ -10,7 +10,7 @@ class School < ActiveRecord::Base
   default_scope :order => ["name ASC"]
   
   def to_param
-    "#{id}-#{name.parameterize}"
+    "#{id}-#{name}"
   end
   
   define_index do
@@ -25,5 +25,7 @@ class School < ActiveRecord::Base
     indexes phone
     indexes fax
   end
+  
+  named_scope :box_schools, :limit => 5, :order => 'RAND()'
   
 end

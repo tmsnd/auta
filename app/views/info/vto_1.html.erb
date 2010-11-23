@@ -1,5 +1,7 @@
 <% @page_title = "Výhody technických oborů | Bude vás to bavit" %>
+<div class="advtopedge"></div>
 <div class="col1 advantages relative">
+<div class="advmid">
   <h2>Výhody technických oborů</h2>
   <p class="message">Prakticky zaměřené studium vás bude bavit.</p>
   
@@ -18,7 +20,7 @@
   </ul>
   
   <table>
-    <tr>
+    <tr class="tabhead">
       <th>SOU </th>
       <th class="small center">Míra <br />identifikace</th>
       <th>SOS</th>
@@ -26,7 +28,7 @@
       <th>VOS</th>
       <th class="small center">Míra <br />identifikace</th>
     </tr>
-    <tr>
+    <tr class="tabbody">
       <td>Mechanik- opravář</td>
       <td class="center">77 %</td>
       <td>Elektrotechnika</td>
@@ -34,7 +36,7 @@
       <td>Strojírenství</td>
       <td class="center">83 %</td>
     </tr>
-    <tr>
+    <tr class="tabbody">
       <td>Automechanik</td>
       <td class="center">81 %</td>
       <td>Strojírenství</td>
@@ -42,7 +44,7 @@
       <td>Elektrotechnika</td>
       <td class="center">84 %</td>
     </tr>
-    <tr>
+    <tr class="tabbody">
       <td>Průměr všech oborů</td>
       <td class="center">64 %</td>
       <td>Průměr všech oborů</td>
@@ -50,16 +52,20 @@
       <td>Průměr všech oborů</td>
       <td class="center">81 %</td>
     </tr>
+    <tr class="tabspod">
+    <td colspan=6></td>
+    </tr>
   </table>
   <p class="small">*Údaje o spokojenosti absolventů s dalšími obory najdete na <a href="http://www.infoabsolvent.cz">www.infoabsolvent.cz</a></p>
-</div> <!-- /.col1 -->
-
+</div>
+<div class="advbotedge"></div>
+</div> 
+<!-- /.col1 -->
 <div class="col2">
 
+<%= render :partial => 'shared/box_search' %>
   <div class="boxSubmenu">
     <%= render :partial => "shared/vto_navigation" %>
   </div>
-<%= render :partial => 'shared/box_search' %>
-<%= render :partial => 'shared/box_open_doors' %>  
 
 </div>

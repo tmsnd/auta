@@ -1,6 +1,8 @@
 - use_home_map
 .col1
+  .imapa
   #hp-map.box.map
+    .filtertop    
     .filter
       %h2.fl Filtrování:
       %ul.fr
@@ -47,29 +49,8 @@
                     .item
                       = link_to_function truncate(section.name, :length => 40, :omission => "&hellip;"), "filterSection('#{section.id}')"
         = link_to 'Next<span></span>', '', :class => 'overlaid next'
-  .box.boxArticles.cols.cols50
-    %h2 Proč technický obor
-    .col1.item
-      %h4.small Technický obor – jistá budoucnost,
-      = image_tag 'article-left.jpg'
-      %ul.list
-        %li= link_to 'Prakticky zaměřené studium vás bude bavit.', vto_1_path
-        %li= link_to 'Jako absolvent snadno najdete uplatnění.', vto_2_path
-        %li= link_to 'Vyděláte si dobré peníze.', vto_3_path
-        %li= link_to 'O vaši profesi bude na trhu práce dlouhodobý zájem.', vto_4_path
-      %p Nečekejte žádnou ubíjející rutinu v kanceláři. Vás čeká tvůrčí profese, která vám přinese uspokojení i uznání. Získáte jistotu dobrého zaměstnání a prostor učit se i objevovat nové věci. Už se sami sebe nikdy nezeptáte „Co teď budu dělat?“. Spíš budete přemýšlet, do čeho se chcete pustit dřív.
-    .col2            
-      .item
-        %h4 Ministryně školství, PhDr. Miroslava Kopicová
-        = image_tag 'article-right.jpg', :class => 'img fl'
-        %p &bdquo;Rozšiřování spolupráce škol a zaměstnavatelů je jednou z klíčových podmínek rozvoje středního odborného vzdělávání v České republice. To se nachází v nelehké situaci a přitom existuje v této oblasti spousta nevyužitého potenciálu. Cestu naznačuje např. Akční plán podpory odborného vzdělávání, který vznikl na MŠMT.
-        = link_to 'čtěte více', 'http://new.autanasbavi.cz/aktualita/10-ministryne-skolstvi-phdr-miroslava-kopicova', :class => 'button-more'
-.col2
-  -#.boxSubmenu
-    -#%ul
-      -#%li.competition= tab_for('Pravidla soutěže', rules_path)
-      -#%li.competition= tab_for('Podílejte se na tomto webu', questionary_path)     
+    .filterbottom 
+.col2b  
   = render :partial => 'shared/box_search'
-  = render :partial => 'shared/box_open_doors'
   = render :partial => 'shared/box_news', :locals => { :num => 2  }
-  = render :partial => 'shared/box_hints'
+  = render :partial => 'shared/box_why'

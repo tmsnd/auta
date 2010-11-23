@@ -1,21 +1,24 @@
 - @page_title = @hint.name + " | Rady odborníků"
 .col1.main
   %h2= @hint.name
-  .box.box-detail
+  .box.box-detail1
+  .box.box-detail2
     %p= @hint.perex
-  .actions
-    .item
-      %p= @hint.content
-  .gallery
-    %h3 Fotografie
-    - @hint.photos.each do |row|
-      .img
-        = image_tag row.photo.url(:small)
-.col2
+    .actions
+      .item
+        %p= @hint.content
+    .gallery
+      %h3 Fotografie
+      - @hint.photos.each do |row|
+        .img
+          = image_tag row.photo.url(:small)
+  .box.box-detail3s
+.col2b
   .boxSubmenu
     %ul
       %li= tab_for('Rady odborníků', no_specialists_hints_path)
       %li= tab_for('Autoprofesionálové', specialists_hints_path)
-  = render :partial => 'shared/box_search'    
-  = render :partial => 'shared/box_open_doors'
-  = render :partial => 'shared/box_news', :locals => { :num => 2  }
+  = render :partial => 'shared/box_search'  
+  .boxNews
+    = render :partial => 'shared/box_news', :locals => { :num => 2  }
+

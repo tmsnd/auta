@@ -1,7 +1,8 @@
 .box
   .h
-    %h3 Dny otevřených dveří
+    %h3 Dny otevřených dveříx
   .in.openDays
     %ul
-      - OpenDoor.box_days.each do |day|
-        %li= link_to "<span class=\"fl\">#{truncate(day.school.name, :length => 45, :omission => '&hellip;')}</span><strong>#{formatted_date(day.date_from)}</strong>", school_path(day.school)
+      - OpenDoor.box_days1.each do |day|
+        %li= link_to "<span class=\"fl\" style='color:black;'>Nejbližsí den otevřených dveří:</span><span class=\"fl\" style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span class=\"fl\" style='color:black;'>#{truncate(day.school.name, :length => 45, :omission => '&hellip;')}</span>", school_path(day.school)
+  .b        

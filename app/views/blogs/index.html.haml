@@ -2,7 +2,8 @@
 .col1.main
   %h2 Aktuality
   - @collection.each do |blog|
-    .box.box-detail.item
+    .box.box-detail1.item
+    .box.box-detail2.item
       %h3= link_to blog.name, blog
       - if blog.photos.size > 0
         .img
@@ -10,11 +11,9 @@
       .self
         %p= blog.perex
       = link_to 'čtěte více', blog, :class => 'button-more'
+    .box.box-detail3.item          
   .paging
     = will_paginate @collection, :previous_label => 'Předchozí', :next_label => 'Další'    
-.col2
+.col2b
   = render :partial => 'shared/box_search'
   = render :partial => 'shared/box_sections'
-  = render :partial => 'shared/box_open_doors'
-
-

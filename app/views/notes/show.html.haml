@@ -1,22 +1,23 @@
 - @page_title = @note.name + " | Tiskové zprávy"
 .col1.main
   %h2= @note.name
-  .box.box-detail
+  .box.box-detail1    
+  .box.box-detail2
     %p= @note.perex
-  .actions
-    .item
-      %p= @note.content
-  .gallery
-    %h3 Fotografie
-    - @note.photos.each do |row|
-      .img
-        = image_tag row.photo.url(:small)
-  .gallery
-    %h3 Přiložené soubory
-    -#- @note.file_atts.each do |row|
-      .img
-        -#= link_to row.pdf_note_file_name, row.pdf_note.url
-.col2
+    .actions
+      .item
+        %p= @note.content
+    .gallery
+      %h3 Fotografie
+      - @note.photos.each do |row|
+        .img
+          = image_tag row.photo.url(:small)
+    .gallery
+      %h3 Přiložené soubory
+      -#- @note.file_atts.each do |row|
+        .img
+          -#= link_to row.pdf_note_file_name, row.pdf_note.url
+  .box.box-detail3s        
+.col2b
   = render :partial => 'shared/box_search'
-  = render :partial => 'shared/box_open_doors'
   = render :partial => 'shared/box_news', :locals => { :num => 2  }

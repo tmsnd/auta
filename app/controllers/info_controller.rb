@@ -1,12 +1,13 @@
 class InfoController < FrontendController
   
-  #before_filter :check_authentication, :except => [:competition,:vto_1, :vto_2, :vto_3, :vto_4, :about, :map, :faq, :accesibility, :contact, :download]
-  before_filter :check_authentication, :except => [:questionary, :questionary_submit, :rules, :competition, :vto_1, :vto_2, :vto_3, :vto_4, :about, :map, :faq, :accesibility, :contact, :download]
+  #before_filter :check_authentication, :except => [:competition,:vto_1, :vto_2, :vto_3, :vto_4, :about, :map, :faq, :rodice, :accesibility, :contact, :download]
+  before_filter :check_authentication, :except => [:questionary, :questionary_submit, :rules, :competition, :vto_1, :vto_2, :vto_3, :vto_4, :about, :map, :faq, :rodice, :accesibility, :contact, :download]
   
   def rules
     add_crumb "Pravidla soutěže"
   end  
-  
+
+
   def questionary
     add_crumb "Dotazník"
   end
@@ -80,6 +81,11 @@ class InfoController < FrontendController
   def about
     add_crumb "O Sdružení AP"
   end
+  
+  def rodice
+    add_crumb "Pro rodiče a děti"
+  end  
+
   
   def map
     add_crumb "Interaktivní mapa"

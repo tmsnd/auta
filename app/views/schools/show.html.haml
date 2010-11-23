@@ -1,43 +1,46 @@
 - @page_title = @school.name + " | Seznam škol"
 .col1.main
   %h2= @school.name
-  %p.address
-    %strong Adresa: 
-    = @school.name
-    %br
-    %strong Web:
-    = link_to @school.www, 'http://'+ @school.www
-    %br
-    %strong Email:
-    = mail_to @school.email1, @school.email1
-    %br
-    %strong Nejbližší den otevřených dveří:
-    = formatted_date(@school.open_doors[0].date_from) rescue nil
-    .box.box-detail
-      %p= @school.anotation
-    .gallery
-      %h3 Fotografie
-      - @school.photos.each do |row|
-        .img
-          = image_tag row.photo.url(:small)
-    .actions
-      -#%h3 Školní akce
-      -#- @sa.each do |sa|
-        .item
-          %h4-#= formatted_date(sa.datum)
-          %p-#= sa.description
-    .actions
-      %h3 Dny otevřených dveří
-      - @school.open_doors.each do |d|
-        .item
-          %h4= formatted_date(d.date_from)
-          %p= d.description
-    .spheres      
-      %h3 Seznam oborů
-      - @school.sections.each do |s|
-        %ul
-          %li{ :class => "#{cycle('fl', 'fr')}" }= link_to s.name, section_path(s)
-.col2
-  = render :partial => 'shared/submenu_navigation'
+  .box.box-detail1
+  .box.box-detail2  
+    %p.address
+      %strong Adresa: 
+      = @school.name
+      %br
+      %strong Web:
+      = link_to @school.www, 'http://'+ @school.www
+      %br
+      %strong Email:
+      = mail_to @school.email1, @school.email1
+      %br
+      %strong Nejbližší den otevřených dveří:
+      = formatted_date(@school.open_doors[0].date_from) rescue nil
+      .box.box-detail
+        %p= @school.anotation
+      .gallery
+        %h3 Fotografie
+        - @school.photos.each do |row|
+          .img
+            = image_tag row.photo.url(:small)
+      .actions
+        -#%h3 Školní akce
+        -#- @sa.each do |sa|
+          .item
+            %h4-#= formatted_date(sa.datum)
+            %p-#= sa.description
+      .actions
+        %h3 Dny otevřených dveří
+        - @school.open_doors.each do |d|
+          .item
+            %h4= formatted_date(d.date_from)
+            %p= d.description
+      .spheres      
+        %h3 Seznam oborů
+        - @school.sections.each do |s|
+          %ul
+            %li{ :class => "#{cycle('fl', 'fr')}" }= link_to s.name, section_path(s)
+  .box.box-detail3s          
+.col2b
   = render :partial => 'shared/box_search'
+  = render :partial => 'shared/submenu_navigation2'
   = render :partial => 'shared/box_news', :locals => { :num => 2  } 

@@ -1,16 +1,18 @@
 - @page_title = @section.name + " | Seznam oborů"
 .col1.main
   %h2= @section.name
-  .box.box-detail
+  .box.box-detail1
+  .box.box-detail2
     %p= @section.description
-  .actions
-    %h3 Předměty důležité pro obor
-    .item
-      %p= @section.course
-  .actions
-    %h3 Uplatnění
-    .item
-      %p= @section.exercise
-.col2
-  = render :partial => 'shared/submenu_navigation'
+    .actions
+      %h3 Předměty důležité pro obor
+      .item
+        %p= @section.course
+    .actions
+      %h3 Uplatnění
+      .item
+        %p= @section.exercise
+  .box.box-detail3s        
+.col2b
+  = render :partial => 'shared/submenu_navigation2'
   = render :partial => 'shared/box_search'

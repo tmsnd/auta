@@ -1,8 +1,9 @@
 .box
   .h
     %h3 Nejvyhledávanější obory
-  .in
+  .ins
     %ul
     - Section.box_sections.each do |section|
       %li= link_to section.name, section_path(section)
     =  link_to 'všechny obory', sections_path, :class => 'button-more button-more2'
+  .b

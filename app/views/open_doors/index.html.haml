@@ -1,14 +1,10 @@
-- @page_title = "Dny otevřených dveří"
+- @page_title = "Pro rodiče a děti"
 .col1.main
-  %h2 Dny otevřených dveří
-  - @open_doors.each do |open_door|
-    .box.box-detail
-      %h3= link_to "#{formatted_date(open_door.date_from)}, #{open_door.school.name}", school_path(open_door.school)
-      %p= open_door.description
-      = link_to "Jdi na školu", school_path(open_door.school), :class => 'button-more'
-  .paging
-    = will_paginate @open_doors, :previous_label => 'Předchozí', :next_label => 'Další'
-.col2
+  %h2 Pro rodiče a děti
+  .box.box-detail1.item
+  .box.box-detail2.item
+    %p.rodice="&nbsp;"
+  .box.box-detail3.item   
+.col2b
   = render :partial => 'shared/box_search'
-  = render :partial => 'shared/box_sections'
-  = render :partial => 'shared/box_hints'
+

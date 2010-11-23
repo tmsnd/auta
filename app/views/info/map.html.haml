@@ -1,8 +1,9 @@
 - @page_title = "Interaktivní mapa"
 - use_home_map
 .col1
-  %h2 Interaktivní mapa
+  .imapa
   #hp-map.box.map
+    .filtertop  
     .filter
       %h2.fl Filtrování:
       %ul.fr
@@ -49,6 +50,7 @@
                     .item
                       = link_to_function truncate(section.name, :length => 40, :omission => "&hellip;"), "filterSection('#{section.id}')"
         = link_to 'Next<span></span>', '', :class => 'overlaid next'
+    .filterbottom        
   .cols.cols50.sections
     .col1
       %h3= link_to "Obory s maturitou", graduations_sections_path
@@ -60,8 +62,6 @@
       %ul.list
         -Section.graduation(false).each do |nograd|
           %li= link_to nograd.name, section_path(nograd)
-.col2
-  = render :partial => 'shared/submenu_navigation'
+.col2b
   = render :partial => 'shared/box_search'
-  = render :partial => 'shared/box_open_doors'
-  = render :partial => 'shared/box_hints'
+  = render :partial => 'shared/submenu_navigation'

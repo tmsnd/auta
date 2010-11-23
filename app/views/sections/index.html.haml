@@ -3,7 +3,7 @@
   %h2 
     Seznam oborů 
     = type_section(params[:action])
-  .filter
+  .filter_o
     %form{ :action => '/sections/index', :method => 'get', :class => 'fl' }
       %fieldset
         %label{ :for => 'sectionSelector' }Vyberte obory
@@ -13,16 +13,18 @@
           %option{ :value => 'graduation' }s maturitou
           %option{ :value => 'no_graduation' }bez maturity
   - @sections.each do |section|
-    .box.box-detail
+    .box.box-detail4
+    .box.box-detail5
       %h3= link_to section.name, section
       %h4= graduation(section.graduation)
       %p= truncate(section.description, :length => 320)
       = link_to "Otevři profil", section, :class => 'button-more'
+    .box.box-detail6     
   .paging
     = will_paginate @sections, :previous_label => 'Předchozí', :next_label => 'Další'
-.col2
-  = render :partial => 'shared/submenu_navigation'
+.col2b
   = render :partial => 'shared/box_search'
+  = render :partial => 'shared/submenu_navigation2'
   = render :partial => 'shared/box_sections'
 
 

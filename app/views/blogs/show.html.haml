@@ -1,23 +1,23 @@
 - @page_title = @blog.name + " | Aktuality"
 .col1.main
   %h2= @object.name
-  .box.box-detail
+  .box.box-detail1  
+  .box.box-detail2
     %p= @object.perex
-  .actions
-    .item
-      %p= @object.content
-  .gallery
-    %h3 Fotografie
-    - @object.photos.each do |row|
-      .img
-        = image_tag row.photo.url(:small)
-  .gallery
-    %h3 Přiložené soubory
-    -#- @object.file_atts.each do |row|
-      .img
-        -#= link_to row.pdf_blog_file_name, row.pdf_blog.url
-      
-.col2
+    .actions
+      .item
+        %p= @object.content
+    .gallery
+      %h3 Fotografie
+      - @object.photos.each do |row|
+        .img
+          = image_tag row.photo.url(:small)
+    .gallery
+      %h3 Přiložené soubory
+      -#- @object.file_atts.each do |row|
+        .img
+          -#= link_to row.pdf_blog_file_name, row.pdf_blog.url
+  .box.box-detail3s      
+.col2b
   = render :partial => 'shared/box_search'
   = render :partial => 'shared/box_sections'
-  = render :partial => 'shared/box_open_doors'
