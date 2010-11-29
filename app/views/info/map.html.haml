@@ -36,10 +36,10 @@
             %option{ :value => '9-zlinsky' }Zlínský kraj
             %option{ :value => '10-ostravsky' }Moravskoslezský kraj
             %option{ :value => '11-vysocina' }Kraj Vysočina
-    #map
-    .slider
+    #map{:style => "background-image: url('../imagesnew/stred_stranek/bg_pod_mapou.jpg');width:709px;  margin-left: -10px;border-left: 1px solid #d2d6dc;border-right: 2px solid #d2d6dc;"}
+    .slider{:style => "background-color: #cfe7ff;height:180px;width:693px;margin-left: -10px;border-left: 1px solid #d2d6dc;border-right: 2px solid #d2d6dc;"}
       %h2 Vyberte si svůj obor&hellip;
-      #slider
+      #slider{:style => "background-color: #fff; width:685px; margin-left: 5px;height:130px;margin-bottom:0px;margin-top:0px;"}
         = link_to 'Prev<span></span>', '', :class => 'overlaid prev'
         .in
           #slider_in

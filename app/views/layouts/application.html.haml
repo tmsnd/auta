@@ -9,8 +9,10 @@
     %meta{ :name => 'keywords', :content => 'auta, auto, automobil, automobilový, střední škola, učiliště, studijní, obor, odborné učiliště, učební, technika, kam na školu, autoprůmysl, vzdělání, kam na školu, automechanik, elektromechanik, autoelektrikář, mechanik, strojní, průmyslová, elektro' } 
     = page_title
     = stylesheet_link_tag 'application', 'prg'
+    = stylesheet_link_tag 'videobox'
     = stylesheet_link_tag 'print', :media => 'print'
-    = javascript_include_tag ['application','jquery-1.3.2', 'jquery.livequery.js', 'swfobject.js']
+    = javascript_include_tag ['application','jquery-1.3.2', 'jquery.livequery.js', 'swfobject.js', 'mootools.js', 'videobox.js']
+
   %body
     %ul.noscreen
       %li= link_to 'Přeskočit na obsah', '#content'
@@ -20,41 +22,41 @@
       #lskate     
       #view
         #head
-
+          #homeClick{:onclick => "window.location='/'", :title => "Home"}
           #topForm
             = render :partial => 'shared/top_navigation'
-          #regbox          
-            - if !current_user
-              - @user_session = UserSession.new
-              - form_for @user_session, :url => user_session_path, :method => 'post', :html => { :class => 'formBox' } do |f|
-                %fieldset
-                  .clearfix1
-                    = f.label :email, 'E-mail:'
-                    = f.text_field :email, :class => 'button'
-                  .clearfix2
-                    = f.label :password, 'Heslo:'
-                    = f.password_field :password, :class => 'button'
-                  .clearfix3
-                    = f.submit "Přihlásit", :class => 'submit'
-                    = link_to "Registrace", new_user_path
-                    %br
-                    = f.check_box :remember_me
-                    = f.label :remember_me, 'Zapamatovat na tomto počítači'
-            - else
-              %br
-              %b Přihlášený uživatel:
-              = current_user.email
-              %br
-              = link_to "Odhlásit se", user_session_path, :method => :delete, :confirm => 'Opravdu se chcete odhlásit?'
-              %span &nbsp; | &nbsp;
-              - if(current_user.urole == 2 || current_user.urole == 1)
-                = link_to "Administrace", admin_path
-              - if(current_user.urole == 3)
-                = link_to "Administrace", admin_employers_path
-              %br
-              %br
-              %br
-              %br
+            #regbox          
+              - if !current_user
+                - @user_session = UserSession.new
+                - form_for @user_session, :url => user_session_path, :method => 'post', :html => { :class => 'formBox' } do |f|
+                  %fieldset
+                    .clearfix1
+                      = f.label :email, 'E-mail:'
+                      = f.text_field :email, :class => 'button'
+                    .clearfix2
+                      = f.label :password, 'Heslo:'
+                      = f.password_field :password, :class => 'button'
+                    .clearfix3
+                      = f.submit "Přihlásit", :class => 'submit'
+                      = link_to "Registrace", new_user_path
+                      %br
+                      = f.check_box :remember_me
+                      = f.label :remember_me, 'Zapamatovat na tomto počítači'
+              - else
+                %br
+                %b Přihlášený uživatel:
+                = current_user.email
+                %br
+                = link_to "Odhlásit se", user_session_path, :method => :delete, :confirm => 'Opravdu se chcete odhlásit?'
+                %span &nbsp; | &nbsp;
+                - if(current_user.urole == 2 || current_user.urole == 1)
+                  = link_to "Administrace", admin_path
+                - if(current_user.urole == 3)
+                  = link_to "Administrace", admin_employers_path
+                %br
+                %br
+                %br
+                %br
           -#%p#competition Soutež je ukončena, podívejte se na <a href="/soutez">vyhodnocení</a>!                             
           #mainMenu
             = render :partial => 'shared/main_navigation'
@@ -71,11 +73,10 @@
             %li= link_to "Prohlášení o přístupnosti", accesibility_path
             %li= link_to "O webu", home_path
           %p.fl2= link_to "<img src='/imagesnew/ikona_facebook.jpg' width=25 height=25/>", "http://www.facebook.com"
-      #rskate 
-        #ig_logo= link_to "<img src='/imagesnew/img/logo_iq.jpg' alt='IQ_LOGO' width=150 height=150/>", "http://www.iqindustry.cz"
     = yield :home_map
     = yield :maps
     = javascript_include_tag ['defaults','jquery.scrollTo-1.4.0-min','jquery.serialScroll-1.2.1-min', 'jquery.livequery.js', 'init']
+    %script{:type => "text/javascript",:src => "/javascripts/webticker_lib.js"}  
     %script{:type => "text/javascript"}  
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

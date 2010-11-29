@@ -35,10 +35,10 @@
             %option{ :value => '9-zlinsky' }Zlínský kraj
             %option{ :value => '10-ostravsky' }Moravskoslezský kraj
             %option{ :value => '11-vysocina' }Kraj Vysočina
-    #map
-    .slider
+    #map{:style => "background-image: url('../imagesnew/stred_stranek/bg_pod_mapou.jpg');width:709px;  margin-left: -10px;border-left: 1px solid #d2d6dc;border-right: 2px solid #d2d6dc;"}
+    .slider{:style => "background-color: #cfe7ff;height:180px;width:693px;margin-left: -10px;border-left: 1px solid #d2d6dc;border-right: 2px solid #d2d6dc;"}
       %h2 Vyberte si svůj obor&hellip;
-      #slider
+      #slider{:style => "background-color: #fff; width:685px; margin-left: 5px;height:130px;margin-bottom:0px;margin-top:0px;"}
         = link_to 'Prev<span></span>', '', :class => 'overlaid prev'
         .in
           #slider_in
@@ -49,8 +49,35 @@
                     .item
                       = link_to_function truncate(section.name, :length => 40, :omission => "&hellip;"), "filterSection('#{section.id}')"
         = link_to 'Next<span></span>', '', :class => 'overlaid next'
-    .filterbottom 
+    .filterbottom     
+  .video_pole
+    .video_pole_vrh
+    .video_pole_stred
+      .video_nadpis="Videogalerie"
+      .video
+        %a{:href => "video/IVECO_IRISBUS GB.flv", :rel => "vidbox", :title => "IVECO IRISBUS GB"}
+          %img{:src => "img/bus.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
+      .video
+        %a{:href => "video/JAWA 660 Sportard.flv", :rel => "vidbox", :title => "JAWA 660 Sportard"}
+          %img{:src => "img/java.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
+      .video
+        %a{:href => "video/tatra.flv", :rel => "vidbox", :title => "TATRA"}
+          %img{:src => "img/tatra.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
+      .video
+        %a{:href => "video/TPCA.flv", :rel => "vidbox", :title => "TPAC"}
+          %img{:src => "img/tpac.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}          
+      .video_popisek="IVECO IRISBUS GB"
+      .video_popisek="JAWA 660 Sportard"
+      .video_popisek="Tatra"
+      .video_popisek="TPCA"
+    .video_pole_spod
+
+  #skater       
+        
 .col2b  
   = render :partial => 'shared/box_search'
   = render :partial => 'shared/box_news', :locals => { :num => 2  }
   = render :partial => 'shared/box_why'
+  #boxiq
+    %a{:href => "http://www.iqindustry.cz", :title => "iqindustry", :target => "_blank"}
+      %img{:src => "imagesnew/img/logo_iq_bila.jpg", :alt => "IQ_LOGO", :width => "150", :height => "150", :border => "0"}      
