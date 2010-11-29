@@ -389,7 +389,7 @@ a.overlaid,
            #hp-map .slider h2 {padding-left:5px;padding-bottom:5px;}
            
            #slider_in     { overflow: hidden; width: 630px; height: 93px; clear: both; }
-           #slider_in ul  { width: 3000px; overflow: hidden; }
+           #slider_in ul  { width: 3600px; overflow: hidden; }
 
            #slider .bg_1  { background: url('../images/slider/cislo_pas_1.jpg');background-position: -10% 50% !important; }
            #slider .bg_2  { background: url('../images/slider/cislo_pas_2.jpg');background-position: -10% 50% !important; }

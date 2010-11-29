@@ -55,23 +55,24 @@
     .video_pole_stred
       .video_nadpis="Videogalerie"
       .video
-        %a{:href => "video/IVECO_IRISBUS GB.flv", :rel => "vidbox", :title => "IVECO IRISBUS GB"}
+        %a.vidbox{:href => "http://www.autanasbavi.cz/video/IVECO_IRISBUS GB.flv", :title => "IVECO IRISBUS GB"}
           %img{:src => "img/bus.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
       .video
-        %a{:href => "video/JAWA 660 Sportard.flv", :rel => "vidbox", :title => "JAWA 660 Sportard"}
+        %a.vidbox{:href => "http://www.autanasbavi.cz/video/JAWA 660 Sportard.flv", :title => "JAWA 660 Sportard"}
           %img{:src => "img/java.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
       .video
-        %a{:href => "video/tatra.flv", :rel => "vidbox", :title => "TATRA"}
+        %a.vidbox{:href => "http://www.autanasbavi.cz/video/tatra.flv", :title => "TATRA"}
           %img{:src => "img/tatra.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}
       .video
-        %a{:href => "video/TPCA.flv", :rel => "vidbox", :title => "TPAC"}
+        %a.vidbox{:href => "http://www.autanasbavi.cz/video/TPCA.flv", :title => "TPAC"}
           %img{:src => "img/tpac.jpg", :alt => "", :width => "165", :height => "98", :border => "0"}          
       .video_popisek="IVECO IRISBUS GB"
       .video_popisek="JAWA 660 Sportard"
       .video_popisek="Tatra"
       .video_popisek="TPCA"
     .video_pole_spod
-
+    %script
+      ="$(document).ready(function(){$('.vidbox').jqvideobox();});"
   #skater       
         
 .col2b  
