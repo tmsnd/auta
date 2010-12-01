@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
     info.faq 'FAQ', :action => 'faq'
     info.accesibility 'prohlaseni-o-pristupnosti', :action => 'accesibility'
     info.rodice 'pro-rodice-a-deti', :action => 'rodice'    
+    info.proctech 'proc-technicky-obor', :action => 'proctech'      
+    info.dny 'dny-otevrenych-dveri', :action => 'dny'      
     info.contact 'kontakt', :action => 'contact'
     info.download 'ke-stazeni', :action => 'download'
     info.competition 'soutez', :action => 'competition'

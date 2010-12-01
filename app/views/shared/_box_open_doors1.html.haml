@@ -5,7 +5,7 @@
   = "<span style='color:black;'>&nbsp;</span>"
   - OpenDoor.box_days2.each do |day|
     - if i==1
-      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", school_path(day.school)
+      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
     - if i==0
-      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", school_path(day.school)
+      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
       - i=1
