@@ -219,7 +219,7 @@ a.overlaid,
 
         #topForm ul li a.about      {padding-left: 0px;padding-right:12px;border-right: 2px #72a5c0 solid;}
         #topForm ul li a.news       {padding-left: 12px;padding-right:12px;border-right: 2px #72a5c0 solid;}
-        #topForm ul li a.print      {padding-left: 12px;padding-right:12px;border-right: 2px #72a5c0 solid; }
+        #topForm ul li a.print      {padding-left: 12px;padding-right:12px;border-right: 2px #72a5c0 solid;}
         #topForm ul li a.faq        { padding-left: 12px;}
 
         #regbox                    { width: 238px; height: 156px; margin-top: 12px;margin-left:92px; background: url('../imagesnew/registrace/registrace.jpg') 0 0 no-repeat; }
@@ -284,8 +284,8 @@ a.overlaid,
   #content .col2 .box .in .clearfix .button {margin-top:19px;margin-left:5px;width:170px;background-color:transparent;margin-bottom:10px;}
   #content .col2 .box .in li        { margin-bottom: 5px; }
   #content .col2 .box .in .item     { clear: both; }
-  #content .col2 .box .b            { height: 10px;  text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg'); }  
-  #content .col2 .box .submit { width: 86px !important; height: 28px;margin-left:10px;margin-bottom:-10px;padding-bottom:5px !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat; }
+  #content .col2 .box .b            { height: 10px; margin-top:-10px; text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg'); }  
+  #content .col2 .box .submit { width: 86px !important; height: 28px;margin-left:10px;margin-bottom:0px;padding-bottom:5px !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat; }
   
   #content .col2 .box .ins           { padding: 18px 14px; overflow: hidden; height: 100%; background: #cfe7ff url('../imagesnew/sidebar/vyhledavani_stred.jpg') no-repeat; }
   #content .col2 .box .ins .img      {  }
@@ -304,8 +304,8 @@ a.overlaid,
   #content .col2b .box .in .clearfix .button {margin-top:19px;margin-left:5px;width:170px;background-color:transparent;margin-bottom:10px;}
   #content .col2b .box .in li        { margin-bottom: 5px; }
   #content .col2b .box .in .item     { clear: both; }
-  #content .col2b .box .b            { height: 10px;  text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg'); }  
-  #content .col2b .box .submit { width: 86px !important; height: 28px;margin-left:10px;margin-bottom:-10px;padding-bottom:5px !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat; }
+  #content .col2b .box .b            { height: 10px; margin-top:-10px; text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg'); }  
+  #content .col2b .box .submit { width: 86px !important; height: 28px;margin-left:10px;margin-bottom:0px;padding-bottom:5px !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat; }
 
   #content .col2b .box .ins           { border-left: 1px solid #d2d6dc !important;border-right: 2px solid #d2d6dc !important;padding: 18px 14px; overflow: hidden; height: 100%; background: #cfe7ff url('../imagesnew/sidebar/vyhledavani2_stred.jpg') no-repeat; }
   #content .col2b .box .ins .img      {  }
@@ -357,7 +357,7 @@ a.overlaid,
   img.fr  { margin: 3px 0 2px 10px; }
 
   /* -- Basic buttons -- */
-  .button-more, .button-more:hover    { display: block; width: 92px; height: 22px; padding-top: 4px; text-align:center; float: right; margin-top: 10px; text-align: center; font-size: .8em; text-decoration: none;color: #fff !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat;  }
+  .button-more, .button-more:hover    { display: block; width: 92px; height: 28px; padding-top: 4px; text-align:center; float: right; margin-top: 0px; text-align: center; font-size: .8em; text-decoration: none;color: #fff !important;background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat;  }
   .button-more2, .button-more2:hover  { width: 92px; background: url('../imagesnew/registrace/butt_red.png') 0 0 no-repeat;  }
 
 
@@ -563,8 +563,9 @@ a.overlaid,
     #content div.advantages ul.schools { padding-left: 20px; }
     #content div.advantages ul.schools li { padding-left: 20px; margin-bottom: 5px; background: url('../imagesnew/stred_stranek/puntik.png') 0 .3em no-repeat; }
     #content div.advantages table {  width: 676px;margin: 20px 0 5px; color: #000;  }
-    #content div.advantages table tr.tabhead { color:#fff;width: 676px; background-image: url('../imagesnew/stred_stranek/tabulka_vrh.png');}
-    #content div.advantages table tr.tabbody { width: 676px; background-image: url('../imagesnew/stred_stranek/tabulka_stred.jpg');}
+    #content div.advantages table tr.tabhead { color:#fff;width: 676px;height:42px; }
+    #content div.advantages table tr.tabhead td { font-weight:bold;}
+    #content div.advantages table tr.tabbody { width: 676px; }
     #content div.advantages table th { vertical-align: bottom; }
     #content div.advantages table th,
     #content div.advantages table td { padding: 8px 10px; }
@@ -578,8 +579,8 @@ a.overlaid,
     #content div.faq {padding-left:20px; }
     #content div.faq h2 {font-size:1.4em;margin-top:-10px; }
     #content div.faq table {  width: 676px;margin: 20px 0 5px; color: #000;  }
-    #content div.faq table tr.tabhead { color:#fff;width: 676px; background-image: url('../imagesnew/stred_stranek/tabulka_vrh.png');}
-    #content div.faq table tr.tabbody { width: 676px; background-image: url('../imagesnew/stred_stranek/tabulka_stred.jpg');}
+    #content div.faq table tr.tabhead { color:#fff;width: 676px;height:52px; background-image: url('../imagesnew/stred_stranek/tabulka_vrh.png');}
+    #content div.faq table tr.tabbody { width: 676px; height:22px;background-image: url('../imagesnew/stred_stranek/tabulka_stred.jpg');}
     #content div.faq table th { vertical-align: bottom; }
     #content div.faq table th,
     #content div.faq table td { padding: 8px 10px; }
