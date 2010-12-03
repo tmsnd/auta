@@ -80,6 +80,11 @@
         
 .col2b  
   = render :partial => 'shared/box_search'
+  .boxSubmenu{:style => "margin-bottom:15px;"}
+    %ul
+      %li
+        %a{:href => "dny-otevrenych-dveri"}
+          Dny otevřených dveří          
   = render :partial => 'shared/box_news', :locals => { :num => 2  }
   = render :partial => 'shared/box_why'
   #boxiq

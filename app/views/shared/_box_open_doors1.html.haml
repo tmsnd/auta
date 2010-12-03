@@ -1,7 +1,7 @@
 - i=0
-#NOTICKER
-  = "<span style='color:black;'>Nejbližší den otevřených dveří:</span>"
-#TICKER{:style => "width:755px",:onmouseover => "TICKER_PAUSED=true",:onmouseout => "TICKER_PAUSED=false"}
+#NOTICKER{:style => "width:auto;"}
+  = "<span style='color:#cc0000;'>NEJBLIŽŠÍ DNY OTEVŘENÝCH DVĚŘÍ ZDE:</span>"
+#TICKER{:style => "width:auto;margin-right:10px;",:onmouseover => "TICKER_PAUSED=true",:onmouseout => "TICKER_PAUSED=false"}
   = "<span style='color:black;'>&nbsp;</span>"
   - OpenDoor.box_days2.each do |day|
     - if i==1
