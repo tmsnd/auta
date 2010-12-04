@@ -1,11 +1,13 @@
 - i=0
-#NOTICKER{:style => "width:auto;"}
-  = "<span style='color:#cc0000;'>NEJBLIŽŠÍ DNY OTEVŘENÝCH DVĚŘÍ ZDE:</span>"
-#TICKER{:style => "width:auto;margin-right:10px;",:onmouseover => "TICKER_PAUSED=true",:onmouseout => "TICKER_PAUSED=false"}
-  = "<span style='color:black;'>&nbsp;</span>"
-  - OpenDoor.box_days2.each do |day|
-    - if i==1
-      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
-    - if i==0
-      = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
-      - i=1
+#NOTICKER2{:style => "width:950px;"}
+  #NOTICKER
+    = "<span style='width:auto;color:#cc0000;word-spacing:2px;'>NEJBLIŽŠÍ DNY OTEVŘENÝCH DVĚŘÍ ZDE:</span>"
+  #NOTICKER1{:style => "width:auto;margin-right:0px;"}
+    #TICKER{:style => "width:690px;margin-right:0px;", :onmouseover => "TICKER_PAUSED=true",:onmouseout => "TICKER_PAUSED=false"}
+      = "<span style='color:black;'>&nbsp;</span>"
+      - OpenDoor.box_days2.each do |day|
+        - if i==1
+          = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
+        - if i==0
+          = link_to "<span style='color:#cc0000;'>#{formatted_date(day.date_from)}</span><span style='color:black;'>&nbsp;#{truncate(day.school.name, :length => 70, :omission => '&hellip;')}&nbsp;</span>", 'dny-otevrenych-dveri'
+          - i=1

@@ -269,7 +269,9 @@ a.overlaid,
   .newsplace {clear:both; color: #000; font-weight: bold; font-size: 1.2em;margin-left:15px !important;margin-top:0px !important;margin-bottom:0px !important; padding-top:5px !important;padding-bottom:0px !important;display:block;}
   .newsplace a {margin-left:20px;padding-left:20px !important;margin-top:0px !important;margin-bottom:0px !important; padding-top:0px !important;padding-bottom:0px !important;}
   #NOTICKER {float:left;margin-top:5px;margin-bottom:0px;font-weight:bold;margin-left:10px;margin-right:10px;}
-  #TICKER {display:block;white-space:nowrap;margin-top:5px;margin-bottom:0px;text-decoration:none; overflow:hidden; background-color:#FFFFFF; width:520px;font-weight:bold;}
+  #NOTICKER1 {display:block;white-space:nowrap;margin-top:0px;margin-bottom:0px;text-decoration:none; overflow:hidden; background-color:#FFFFFF; width:500px;font-weight:bold;}
+  #NOTICKER2 {float:left;margin-top:0px;margin-bottom:0px;font-weight:bold;margin-left:0px;margin-right:0px;}
+  #TICKER {display:block;white-space:nowrap;margin-top:5px;margin-bottom:0px;text-decoration:none; overflow:hidden; background-color:#FFFFFF; width:500px;font-weight:bold;}
   #TICKER a:hover {text-decoration:none;}    
   #TICKER a {text-decoration:none;}
     
