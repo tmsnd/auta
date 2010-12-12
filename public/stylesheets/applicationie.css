@@ -1,0 +1,45 @@
+    #regbox  { width: 238px; height: 156px; margin-top: 12px;margin-left:92px; background: url('../imagesnew/registrace/registrace.jpg') 5px 0px no-repeat; }  
+    #regbox form  {margin-left:5px;margin-top:5px;}
+    #regbox .clearfix1  {margin-bottom:4px;}        
+    #regbox .clearfix2  {margin-top:4px;}    
+    #regbox .clearfix3 .submit { width: 86px !important; height: 28px;margin-left:10px;padding-top:2px;padding-bottom:5px !important;background: url('../imagesnew/registrace/butt_red_registrace.jpg') 0 0 no-repeat; }
+    li a.about {margin-left:8px;}   
+    #content div.advantages {margin-right:0px; width: 712px; height:617px;margin-left: 3px;padding-left:0px; background-image: url('../imagesnew/stred_stranek/bg_text_stred.jpg') no-repeat;  }    
+    #content div.advtopedge { width: 712px; height:15px;margin-left: 0px;margin-top:0px; background-image: url('../imagesnew/stred_stranek/bg_text_vrch.jpg') no-repeat;  }    
+    #content div.advmid { width: 697px;height:587px;margin-top:0px;margin-left: 7px;}
+    #content div.advbotedge { width: 712px; clear:both;height:15px;margin-left: 0px; background-image: url('../imagesnew/stred_stranek/bg_text_spod.jpg') no-repeat;  }    
+    #content div.advmid h2 {font-size:1.5em;} 
+
+    #content .col2 .box,  #content .col2b .box   { width:222px;margin-bottom: 15px;margin-top: 6px;margin-left: 0px;    }    
+    #content .col2 .box .h, #content .col2b .box .h {height: 28px; padding-top: 8px; text-align: center; background: url('../imagesnew/sidebar/vyhledavani_vrh.jpg');  }
+    #content .col2 .box .b, #content .col2b .box .b           { height:10px; margin-top:-12px; text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg') 0 0 no-repeat; }  
+
+    #content .col2 .box .ins,#content .col2b .box .ins   { width:191px;padding-top: 18px; padding-left: 14px; overflow: hidden; height: 95%; background: #cfe7ff url('../imagesnew/sidebar/vyhledavani2_stred.jpg') no-repeat; }
+    #content .col2 .box .bnews,#content .col2b .box .bnews  { height:10px; margin-top:-10px; text-align: center; background: url('../imagesnew/sidebar/vyhledavani_spod.jpg') 0 0 no-repeat; }  
+    #content .col2 .box .ins,#content .col2b .box .ins  {border-left: 1px solid #d2d6dc !important;border-right: 2px solid #d2d6dc !important; }
+
+  
+    #content .col1 .boxm { border: 0px #d0e9fd solid;height: 320px; margin-top: 1px; margin-bottom: 25px; padding: 0px 0px 0px 15px;} 
+    #content div.filtertop { width: 712px; height:15px;margin-left:-10px !important;  margin-top: 0px; background: url('../imagesnew/stred_stranek/bg_text_vrch.jpg') 0px 0px no-repeat;  }
+    #content div.filter { width: 712px; height:100px;background: url('../imagesnew/stred_stranek/bg_text_stred.jpg') ;  }       
+    #content div.filterbottom { width: 712px; clear:both;height:15px;margin-left:-10px !important;margin-top: 0px; background: url('../imagesnew/stred_stranek/bg_text_spod.jpg') no-repeat;  }
+  
+    .cols .col1 { width: 697px;}  
+
+    #content .main p      { margin: 0px 0px 0px 0px; }
+  
+    .video {margin-left: 5px;}
+    .video_popisek {margin-left: 5px;}
+    .video_pole {margin-left: 5px;}
+  
+    #content div.advantages table {  width: 676px;margin: 20px 0 5px; color: #000;  }
+    #content div.advantages table tr.tabhead { color:#fff;width: 676px;height:42px; }
+    #content div.advantages table tr.tabhead td { font-weight:bold; padding: 0px 10px;}
+    #content div.advantages table tr.tabbody { width: 676px; }
+    #content div.advantages table tr.tabbody td { padding: 8px 10px; }
+    #content div.advantages table tr.tabspod  { height:10px;width: 676px; background-image: url('../imagesnew/stred_stranek/tabulka_spod.png');}
+    #content div.advantages table tr.tabspod  td { height:0px;padding-top:2px;}
+
+           #hp-map #slider .next        { right: 0; }
+           #hp-map #slider .next span   { padding-left:2px;background: url('../imagesnew/stred_stranek/sipka_right.jpg') no-repeat; }       
+    

@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
       s.each do |school|
         psswd = newpass(8)
         nameschool = school.name.to_s
-        worksheet.write(row, 0, nameschool.chars.to_s.gsub(/[^\x00-\x7F]/, ''))
+        worksheet.write(row, 0, nameschool.chars.normalize(:kd).to_s.gsub(/[^\x00-\x7F]/, ''))
         #worksheet.write(row, 0, "#{school.name}")
         worksheet.write(row, 1, "#{school.email1}")
         worksheet.write(row, 2, "#{psswd}")     
