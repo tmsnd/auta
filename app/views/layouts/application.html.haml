@@ -45,20 +45,20 @@
                     = f.check_box :remember_me
                     = f.label :remember_me, 'Zapamatovat na tomto počítači'
             - else
-              %br
-              %b Přihlášený uživatel:
-              = current_user.email
-              %br
-              = link_to "Odhlásit se", user_session_path, :method => :delete, :confirm => 'Opravdu se chcete odhlásit?'
-              %span &nbsp; | &nbsp;
-              - if(current_user.urole == 2 || current_user.urole == 1)
-                = link_to "Administrace", admin_path
-              - if(current_user.urole == 3)
-                = link_to "Administrace", admin_employers_path
-              %br
-              %br
-              %br
-              %br
+              .clearfix3{:style => "padding-top:57px;padding-left:10px;width:200px;text-align:right;"}
+                %b Přihlášený uživatel:
+                = current_user.email
+                %br
+                = link_to "Odhlásit se", user_session_path, :method => :delete, :confirm => 'Opravdu se chcete odhlásit?'
+
+                - if(current_user.urole == 2 || current_user.urole == 1)
+                  = link_to "Administrace", admin_path
+                - if(current_user.urole == 3)
+                  = link_to "Administrace", admin_employers_path
+                %br
+                %br
+                %br
+                %br
         -#%p#competition Soutež je ukončena, podívejte se na <a href="/soutez">vyhodnocení</a>!                             
       #mainMenu
         = render :partial => 'shared/main_navigation'
